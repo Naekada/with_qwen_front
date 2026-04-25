@@ -1,41 +1,72 @@
 ```
 # Dependencies
 node_modules/
+venv/
+.venv/
+__pycache__/
+*.egg-info/
+.Python
+.python-version
 
 # Build outputs
 dist/
 build/
-*.tsbuildinfo
+target/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dylib
+*.dll
+*.exe
+*.o
+*.obj
+*.a
+*.lib
 
-# Environment variables
+# Logs
+*.log
+logs/
+
+# Environment
 .env
 .env.local
-*.env.*
+.env.*
+!.env.example
 
-# IDE files
+# Editor/IDE
 .vscode/
 .idea/
 *.swp
 *.swo
-
-# Logs
-*.log
-
-# Temporary files
-*.tmp
+*~
+.DS_Store
+Thumbs.db
 
 # Coverage
+.coverage
 coverage/
 htmlcov/
-*.coverage
 
-# Python cache (if any Python files exist in frontend)
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
+# Testing
+.pytest_cache/
+.mypy_cache/
+.nyc_output/
+coverage/lcov-report/
 
-# OS generated files
+# Distribution / Packaging
+*.tar.gz
+*.whl
+*.zip
+*.tar
+*.gz
+
+# OS generated
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 ```
