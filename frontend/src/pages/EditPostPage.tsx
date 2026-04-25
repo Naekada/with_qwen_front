@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Save } from 'lucide-react';
-import { postsApi } from '../../api/posts';
-import type { PostUpdateData } from '../../types';
+import { postsApi } from '@/api/posts';
+import type { PostUpdateData } from '@/types';
 
 export default function EditPostPage() {
   const { id } = useParams<{ id: string }>();

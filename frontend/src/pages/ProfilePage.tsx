@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { User, Mail, Calendar, Shield, Edit2, Save } from 'lucide-react';
-import { useAuth } from '../../contexts/AuthContext';
-import { usersApi } from '../../api/users';
-import type { UserUpdateData } from '../../types';
+import { useAuth } from '@/contexts/AuthContext';
+import { usersApi } from '@/api/users';
+import type { UserUpdateData } from '@/types';
 
 export default function ProfilePage() {
   const { user, updateUser, isAuthenticated } = useAuth();

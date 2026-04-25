@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Users, Shield, UserCheck, Mail, Calendar, Search } from 'lucide-react';
-import { usersApi } from '../../api/users';
-import { useAuth } from '../../contexts/AuthContext';
-import type { User } from '../../types';
+import { usersApi } from '@/api/users';
+import { useAuth } from '@/contexts/AuthContext';
+import type { User } from '@/types';
 
 export default function AdminUsersPage() {
   const [users, setUsers] = useState<User[]>([]);

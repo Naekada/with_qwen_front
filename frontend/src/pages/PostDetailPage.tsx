@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Edit2, Trash2, MessageSquare, Calendar, User } from 'lucide-react';
-import { postsApi } from '../../api/posts';
-import { commentsApi } from '../../api/comments';
-import { useAuth } from '../../contexts/AuthContext';
-import type { Post, Comment, CommentCreateData } from '../../types';
+import { postsApi } from '@/api/posts';
+import { commentsApi } from '@/api/comments';
+import { useAuth } from '@/contexts/AuthContext';
+import type { Post, Comment, CommentCreateData } from '@/types';
 
 export default function PostDetailPage() {
   const { id } = useParams<{ id: string }>();

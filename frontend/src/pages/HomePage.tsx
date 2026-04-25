@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Home, TrendingUp, Clock, MessageSquare } from 'lucide-react';
-import { postsApi } from '../../api/posts';
-import type { Post } from '../../types';
+import { postsApi } from '@/api/posts';
+import type { Post } from '@/types';
 
 export default function HomePage() {
   const [posts, setPosts] = useState<Post[]>([]);

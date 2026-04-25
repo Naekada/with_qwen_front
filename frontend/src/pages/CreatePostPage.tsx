@@ -2,8 +2,8 @@ import { useState, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { PenSquare, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { postsApi } from '../../api/posts';
-import type { PostCreateData } from '../../types';
+import { postsApi } from '@/api/posts';
+import type { PostCreateData } from '@/types';
 
 export default function CreatePostPage() {
   const [title, setTitle] = useState('');

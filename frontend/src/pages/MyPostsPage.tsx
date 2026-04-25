@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FileText, Edit2, Trash2, ArrowLeft } from 'lucide-react';
-import { postsApi } from '../../api/posts';
-import { useAuth } from '../../contexts/AuthContext';
-import type { Post } from '../../types';
+import { postsApi } from '@/api/posts';
+import { useAuth } from '@/contexts/AuthContext';
+import type { Post } from '@/types';
 
 export default function MyPostsPage() {
   const [posts, setPosts] = useState<Post[]>([]);

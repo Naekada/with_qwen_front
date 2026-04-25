@@ -1,8 +1,8 @@
 import { useState, FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { LogIn } from 'lucide-react';
-import { useAuth } from '../../contexts/AuthContext';
-import type { LoginCredentials } from '../../types';
+import { useAuth } from '@/contexts/AuthContext';
+import type { LoginCredentials } from '@/types';
 
 export default function LoginPage() {
   const [username, setUsername] = useState('');

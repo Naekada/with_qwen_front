@@ -1,8 +1,8 @@
 import { useState, FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserPlus } from 'lucide-react';
-import { useAuth } from '../../contexts/AuthContext';
-import type { RegisterData } from '../../types';
+import { useAuth } from '@/contexts/AuthContext';
+import type { RegisterData } from '@/types';
 
 export default function RegisterPage() {
   const [username, setUsername] = useState('');
