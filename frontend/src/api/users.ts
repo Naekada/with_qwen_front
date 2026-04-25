@@ -17,6 +17,9 @@ export const usersApi = {
   getAllUsers: () => 
     apiClient.get<User[]>('/users/', { requiresAuth: true }),
 
+  updateMe: (data: UserUpdateData) => 
+    apiClient.patch<User>('/users/update/me', data, { requiresAuth: true }),
+
   updateUser: (userId: number, data: UserUpdateData) => 
     apiClient.patch<User>(`/users/update/${userId}`, data, { requiresAuth: true }),
 

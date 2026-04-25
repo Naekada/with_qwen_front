@@ -5,6 +5,9 @@ export const commentsApi = {
   createComment: (postId: number, data: CommentCreateData) => 
     apiClient.post<Comment>(`/comments/${postId}/comments`, data, { requiresAuth: true }),
 
+  getByPostId: (postId: number) => 
+    apiClient.get<Comment[]>(`/comments/post/${postId}/comments?limit=100`),
+
   getCommentsByUser: (userId: number, cursor?: number, limit: number = 10) => {
     const params = new URLSearchParams();
     params.set('limit', limit.toString());
