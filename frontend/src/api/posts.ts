@@ -2,6 +2,9 @@ import { apiClient } from './client';
 import type { Post, PostCreateData, PostUpdateData } from '../types';
 
 export const postsApi = {
+  getAll: () => 
+    apiClient.get<Post[]>('/posts/cursor?limit=100'),
+
   createPost: (data: PostCreateData) => 
     apiClient.post<Post>('/posts/create', data, { requiresAuth: true }),
 

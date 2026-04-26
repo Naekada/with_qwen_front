@@ -1,4 +1,4 @@
-import { useToast } from '../contexts/ToastContext';
+import { useToast } from '../../contexts/ToastContext';
 import { X } from 'lucide-react';
 
 export function ToastContainer() {
