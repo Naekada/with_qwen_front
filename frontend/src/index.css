@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #FFF5F5;
+  --color-foreground: #2D2424;
+}
+
+.dark {
+  --color-background: #2D2424;
+  --color-foreground: #FFF5F5;
+}
+
+body {
+  @apply bg-primary-50 text-warm-charcoal dark:bg-warm-charcoal dark:text-primary-50;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-primary-500 via-coral-500 to-sunny-300 
+           text-white font-semibold rounded-xl shadow-lg 
+           hover:shadow-xl hover:scale-105 transition-all duration-300
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-white dark:bg-warm-charcoal border-2 border-primary-200 
+           dark:border-primary-700 text-warm-charcoal dark:text-primary-50 
+           font-semibold rounded-xl shadow-md 
+           hover:shadow-lg hover:border-primary-400 transition-all duration-300;
+  }
+
+  .btn-danger {
+    @apply px-4 py-2 bg-red-500 text-white font-semibold rounded-xl 
+           hover:bg-red-600 transition-all duration-300;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border-2 border-primary-200 
+           dark:border-primary-700 bg-white dark:bg-warm-charcoal 
+           text-warm-charcoal dark:text-primary-50
+           focus:border-coral-500 focus:ring-2 focus:ring-coral-200 
+           dark:focus:ring-coral-800 outline-none transition-all duration-300;
+  }
+
+  .card {
+    @apply bg-white dark:bg-neutral-800 rounded-2xl shadow-lg p-6 
+           border border-primary-100 dark:border-primary-900;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-500 via-coral-500 to-sunny-400 
+           bg-clip-text text-transparent;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-primary-100 dark:bg-neutral-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-coral-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-coral-500;
+}
